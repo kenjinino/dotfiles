@@ -83,7 +83,7 @@ ${swapbar};
 
 # NETWORK
 ${font Open Sans:Bold:size=10}${color dodgerblue3}Network${hr 2}
-$color${font Open Sans:bold:size=8.5}External IP ${font}${alignr}${execi 3600 wget -O - http://ip.tupeux.com | tail}$font${if_existing /sys/class/net/wlan0/operstate up}
+$color${font Open Sans:bold:size=8.5}External IP ${font}${alignr}${curl ipinfo.io/ip}$font${if_existing /sys/class/net/wlan0/operstate up}
 
 ${font Open Sans:bold:size=8.5}wlan0 $font$alignr ${addr wlan0}
 down $alignr ${downspeedf wlan0} kb/s
