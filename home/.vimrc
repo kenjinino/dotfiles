@@ -38,6 +38,8 @@ Plug 'vim-syntastic/syntastic'
 " Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 
+Plug 'sjl/gundo.vim'
+
 " All of your Plugins must be added before the following line
 call plug#end()
 filetype plugin indent on    " required
