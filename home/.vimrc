@@ -325,7 +325,19 @@ function! s:syntastic()
   call lightline#update()
 endfunction
 
+
+""""""""""""""""""""""""""""
+" ale linter
+""""""""""""""""""""""""""""
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
+
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_lint_on_save = 1
+let g:ale_javascript_eslint_use_global = 0
 
