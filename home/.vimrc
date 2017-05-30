@@ -5,40 +5,50 @@ call plug#begin('~/.vim/plugged')
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-Plug 'itchyny/lightline.vim'
+" Look and feel {{{
+  Plug 'itchyny/lightline.vim'
+  Plug 'flazz/vim-colorschemes'
+" }}}
 
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Search {{{
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+  Plug 'rking/ag.vim'
+" }}}
 
-Plug 'tpope/vim-fugitive'
+" Completions and Snippets {{{
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" }}}
 
-Plug 'flazz/vim-colorschemes'
+" General Programming {{{
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'tpope/vim-fugitive'
+  Plug 'sjl/gundo.vim'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-repeat'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'w0rp/ale'
+" }}}
 
-Plug 'rking/ag.vim'
+" Language Specific {{{
+  " Rails
+  Plug 'tpope/vim-rails'
+" }}}
 
-Plug 'tpope/vim-unimpaired'
+" Syntax Highlighting {{{
+  " Pug
+  Plug 'digitaltoad/vim-pug'
 
-Plug 'terryma/vim-multiple-cursors'
+  " Stylus
+  Plug 'wavded/vim-stylus'
 
-Plug 'groenewege/vim-less'
+  " Less
+  Plug 'groenewege/vim-less'
 
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-
-Plug 'tpope/vim-rails'
-
-Plug 'digitaltoad/vim-pug'
-
-Plug 'wavded/vim-stylus'
-
-Plug 'vim-syntastic/syntastic'
-
-" Plug 'leafgarland/typescript-vim'
-Plug 'HerringtonDarkholme/yats.vim'
-
-Plug 'sjl/gundo.vim'
+  " Typescript
+  Plug 'HerringtonDarkholme/yats.vim'
+" }}}
 
 " All of your Plugins must be added before the following line
 call plug#end()
