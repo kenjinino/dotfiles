@@ -141,10 +141,10 @@ endif
 set clipboard=unnamedplus
 
 " resize panes
-"nnoremap <silent> <Right> :vertical resize +5<cr>
-"nnoremap <silent> <Left> :vertical resize -5<cr>
-"nnoremap <silent> <Up> :resize +5<cr>
-"nnoremap <silent> <Down> :resize -5<cr>
+nnoremap <silent> <Right> :vertical resize +5<cr>
+nnoremap <silent> <Left> :vertical resize -5<cr>
+nnoremap <silent> <Up> :resize +5<cr>
+nnoremap <silent> <Down> :resize -5<cr>
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
