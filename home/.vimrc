@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
 " Completions and Snippets {{{
   Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
   Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+  Plug 'jiangmiao/auto-pairs'
 " }}}
 
 " General Programming {{{
