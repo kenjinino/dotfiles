@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'terryma/vim-multiple-cursors'
   Plug 'tpope/vim-unimpaired'
   Plug 'w0rp/ale'
+  Plug 'AndrewRadev/splitjoin.vim'
 " }}}
 
 " Language Specific {{{
@@ -351,4 +352,11 @@ let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_lint_on_save = 1
 let g:ale_javascript_eslint_use_global = 0
+
+
+""""""""""""""""""""""""""""
+" split join
+""""""""""""""""""""""""""""
+let g:splitjoin_html_attributes_bracket_on_new_line = 1
+let g:splitjoin_trailing_comma = 1
 
