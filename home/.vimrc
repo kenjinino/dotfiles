@@ -31,6 +31,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-unimpaired'
   Plug 'w0rp/ale'
   Plug 'AndrewRadev/splitjoin.vim'
+  Plug 'tpope/vim-abolish'
 " }}}
 
 " Language Specific {{{
@@ -93,7 +94,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 """""""""""""
 " Vim options
 """""""""""""
-set number          " Show line numbers
+set number relativenumber " Show line numbers
 
 "" Persistent Undo [Begin]
 set undolevels=1000      " use many muchos levels of undo
