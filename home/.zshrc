@@ -107,4 +107,11 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 source ~/development/revmobads/bashScripts/shell/source-me.sh
 source /usr/share/autojump/autojump.sh
 
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+# export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="$ANDROID_HOME/emulator:$PATH"
