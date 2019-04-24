@@ -37,6 +37,9 @@ call plug#begin('~/.vim/plugged')
 " Language Specific {{{
   " Rails
   Plug 'tpope/vim-rails'
+
+  " Node
+  Plug 'moll/vim-node'
 " }}}
 
 " Syntax Highlighting {{{
@@ -83,7 +86,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Eighties
 
 """""""""""""
 " FZF
@@ -353,7 +356,18 @@ let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_lint_on_save = 1
 let g:ale_javascript_eslint_use_global = 0
+let g:ale_set_highlights = 0
 
+" Ale with flow
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+
+
+""""""""""""""""""""""""""""
+" vim-javascrpt
+""""""""""""""""""""""""""""
+
+let g:javascript_plugin_flow = 0
 
 """"""""""""""""""""""""""""
 " split join
