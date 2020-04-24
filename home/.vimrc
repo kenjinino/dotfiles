@@ -32,6 +32,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'tpope/vim-abolish'
+  Plug 'tomarrell/vim-npr'
+  Plug 'editorconfig/editorconfig-vim'
 " }}}
 
 " Language Specific {{{
@@ -78,8 +80,6 @@ set shiftround      " Configure tabs to two spaces
 
 set laststatus=2
 
-map <F2> :NERDTreeToggle<CR>
-
 map <C-p> :FZF<CR>
 
 if !has('gui_running')
@@ -87,6 +87,19 @@ if !has('gui_running')
 endif
 
 colorscheme Tomorrow-Night-Eighties
+
+"""""""""""""
+" NPR
+"""""""""""""
+let g:vim_npr_max_levels=10
+let g:vim_npr_file_names = ['', '.js', '/index.js', '.ts', '.tsx']
+
+"""""""""""""
+" NERDTree
+"""""""""""""
+
+map <F2> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 """""""""""""
 " FZF
@@ -119,6 +132,8 @@ if has('persistent_undo')
   set undofile
 endif
 "" Persistent Undo [End]
+
+set cmdheight=2
 
 "" Source the vimrc file after saving it [Begin]
 if has("autocmd")

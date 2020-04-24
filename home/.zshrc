@@ -107,8 +107,8 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 source ~/development/revmobads/bashScripts/shell/source-me.sh
 source /usr/share/autojump/autojump.sh
 
-# export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+# export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools
@@ -118,3 +118,13 @@ export PATH="$ANDROID_HOME/emulator:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# voi-inc ops
+export VOI_OPS_DIR="$HOME/vizir/voi-inc/ops"
+export VOI_DETECT_SERVER_DIR="$HOME/vizir/voi-inc/detect-server"
+export VOI_REACH_SERVER_DIR="$HOME/vizir/voi-inc/reach-server"
+
+# source Voi specific things
+if [ -f "$VOI_OPS_DIR/bash_voi.sh" ]; then
+  . "$VOI_OPS_DIR/bash_voi.sh"
+fi
