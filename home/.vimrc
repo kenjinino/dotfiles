@@ -62,6 +62,7 @@ call plug#begin('~/.vim/plugged')
 
   " Typescript
   Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'Quramy/tsuquyomi'
 " }}}
 
 " All of your Plugins must be added before the following line
@@ -395,4 +396,10 @@ let g:javascript_plugin_flow = 0
 """"""""""""""""""""""""""""
 let g:splitjoin_html_attributes_bracket_on_new_line = 1
 let g:splitjoin_trailing_comma = 1
+
+
+""""""""""""""""""""""""""""
+" tsyquyomi
+""""""""""""""""""""""""""""
+let g:tsuquyomi_shortest_import_path = 1
 
